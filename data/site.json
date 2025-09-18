@@ -1,0 +1,41 @@
+{
+  "brand": "Apex Athletics",
+  "hero": {
+    "title": "升级你的专业训练空间",
+    "subtitle": "为高端健身房与运动中心打造的智能器材与运营解决方案。",
+    "primaryAction": {
+      "label": "查看产品矩阵",
+      "href": "#products"
+    },
+    "secondaryAction": {
+      "label": "预约顾问演示",
+      "href": "#consult"
+    },
+    "backgroundVideo": "",
+    "backgroundImage": "/assets/hero.svg"
+  },
+  "highlights": [
+    {
+      "title": "智能联动",
+      "description": "器材、教练与会员数据实时联动，打造沉浸式训练体验。"
+    },
+    {
+      "title": "模块化扩展",
+      "description": "针对不同场馆面积与客群，灵活组合器材矩阵。"
+    },
+    {
+      "title": "精致质感",
+      "description": "航空级材质与极简设计，提升空间辨识度。"
+    }
+  ],
+  "consult": {
+    "title": "预约专属顾问，定制空间方案",
+    "description": "留下需求信息，我们将在 24 小时内与您联系，提供完整器材部署建议。"
+  },
+  "footer": {
+    "company": "Apex Athletics Co.",
+    "email": "service@apex-athletics.com",
+    "phone": "+86 400-800-9001",
+    "address": "上海市静安区灵石路 758 号"
+  }
+}

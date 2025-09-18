@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Athletics | 高端体育器材独立站</title>
+    <meta
+      name="description"
+      content="Apex Athletics 提供高端体育器材解决方案，覆盖力量训练、有氧训练和综合训练空间，支持线上支付与后台管理。"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="#" class="logo" id="brandName">Apex Athletics</a>
+        <nav class="main-nav" aria-label="主导航">
+          <a href="#products">产品矩阵</a>
+          <a href="#solutions">解决方案</a>
+          <a href="#consult">联系我们</a>
+          <a class="nav-button" href="/admin/">后台管理</a>
+        </nav>
+        <button class="cart-button" id="cartToggle" aria-label="查看选购清单">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-media" id="heroMedia" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="hero-eyebrow">高端体育器材 · 旗舰独立站方案</p>
+            <h1 id="heroTitle">升级你的专业训练空间</h1>
+            <p id="heroSubtitle">
+              为高端健身房与运动中心打造的智能器材与运营解决方案。
+            </p>
+            <div class="hero-actions">
+              <a id="heroPrimaryAction" class="button primary" href="#products">查看产品矩阵</a>
+              <a id="heroSecondaryAction" class="button ghost" href="#consult">预约顾问演示</a>
+            </div>
+            <dl class="hero-metrics">
+              <div>
+                <dt>智能器材 SKU</dt>
+                <dd>36+</dd>
+              </div>
+              <div>
+                <dt>合作运动空间</dt>
+                <dd>120+</dd>
+              </div>
+              <div>
+                <dt>客户满意度</dt>
+                <dd>98%</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-glass">
+            <h2>热门训练组合</h2>
+            <ul>
+              <li>
+                <span>力量训练区</span>
+                <strong>Elite Trainer Pro × 2</strong>
+              </li>
+              <li>
+                <span>有氧互动区</span>
+                <strong>Kinetic Ride S7 × 6</strong>
+              </li>
+              <li>
+                <span>综合功能区</span>
+                <strong>Flex Studio Rack × 3</strong>
+              </li>
+            </ul>
+            <p class="hero-tip">可在后台快速替换文案与图片。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="solutions" class="highlights">
+        <div class="container">
+          <h2>为何选择 Apex Athletics？</h2>
+          <div class="highlight-grid" id="highlightGrid"></div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>旗舰产品矩阵</h2>
+              <p>兼具工业美学与智能互联的高端体育器材，可按场景模块化组合。</p>
+            </div>
+            <button class="button ghost" id="exploreAll">下载产品手册</button>
+          </div>
+          <div class="product-grid" id="productGrid" role="list"></div>
+        </div>
+      </section>
+
+      <section class="cta-panel">
+        <div class="container">
+          <div class="cta-card">
+            <h3>需要更完整的场馆规划？</h3>
+            <p>我们提供空间设计、会员系统接入、远程教练服务等一站式解决方案。</p>
+            <a class="button primary" href="#consult">预约方案顾问</a>
+          </div>
+          <div class="cta-card secondary">
+            <h3>想体验在线支付？</h3>
+            <p>集成标准支付接口，可连接 Stripe / 微信支付 / 支付宝。</p>
+            <span class="cta-hint">在后台填写支付密钥即可启用。</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="consult" class="consult">
+        <div class="container consult-grid">
+          <div>
+            <p class="section-eyebrow">预约顾问</p>
+            <h2 id="consultTitle">预约专属顾问，定制空间方案</h2>
+            <p id="consultDescription">
+              留下需求信息，我们将在 24 小时内与您联系，提供完整器材部署建议。
+            </p>
+            <ul class="consult-points">
+              <li>器材选型与预算清单</li>
+              <li>空间动线规划与安装指导</li>
+              <li>支付与会员系统接入方案</li>
+            </ul>
+          </div>
+          <form id="checkoutForm" class="consult-form" autocomplete="on">
+            <div class="form-field">
+              <label for="company">机构名称</label>
+              <input id="company" name="company" placeholder="请输入贵司或场馆名称" required />
+            </div>
+            <div class="form-field">
+              <label for="contact">联系人姓名</label>
+              <input id="contact" name="contact" placeholder="联系人姓名" required />
+            </div>
+            <div class="form-field">
+              <label for="email">邮箱</label>
+              <input id="email" name="email" type="email" placeholder="example@domain.com" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">联系电话</label>
+              <input id="phone" name="phone" placeholder="手机号或座机" required />
+            </div>
+            <div class="form-field">
+              <label for="notes">需求描述</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="请描述空间面积、目标客群或希望了解的器材"></textarea>
+            </div>
+            <button type="submit" class="button primary">提交咨询 / 创建预订单</button>
+            <p class="form-tip">我们会通过邮件发送预订单与支付链接，可在后台同步查看。</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#" class="logo" id="footerBrand">Apex Athletics</a>
+          <p>高端体育器材定制 · 支持多语言独立站部署与全球支付。</p>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <span>邮箱</span>
+            <a id="footerEmail" href="mailto:service@apex-athletics.com">service@apex-athletics.com</a>
+          </div>
+          <div>
+            <span>电话</span>
+            <a id="footerPhone" href="tel:+864008009001">+86 400-800-9001</a>
+          </div>
+          <div>
+            <span>地址</span>
+            <p id="footerAddress">上海市静安区灵石路 758 号</p>
+          </div>
+        </div>
+        <div class="footer-actions">
+          <a class="button ghost" href="mailto:service@apex-athletics.com">联系商务合作</a>
+          <a class="button outline" href="/admin/">登录后台</a>
+        </div>
+      </div>
+      <p class="footer-note">© <span id="footerYear"></span> Apex Athletics Co. 保留所有权利。</p>
+    </footer>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-header">
+        <h2>选购清单</h2>
+        <button id="cartClose" aria-label="关闭清单">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items" role="list"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>预计总价</span>
+          <strong id="cartTotal">￥0</strong>
+        </div>
+        <p class="cart-tip">提交咨询后，顾问将与您确认支付方式与发货时间。</p>
+      </div>
+    </aside>
+
+    <template id="productCardTemplate">
+      <article class="product-card" role="listitem">
+        <div class="product-media">
+          <span class="product-badge"></span>
+          <img src="" alt="" loading="lazy" />
+        </div>
+        <div class="product-body">
+          <h3 class="product-name"></h3>
+          <p class="product-category"></p>
+          <p class="product-description"></p>
+          <ul class="product-features"></ul>
+        </div>
+        <div class="product-meta">
+          <div>
+            <span class="product-price"></span>
+            <span class="product-inventory"></span>
+          </div>
+          <button class="button primary add-to-cart">加入清单</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="/js/main.js" type="module"></script>
+  </body>
+</html>

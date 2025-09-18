@@ -1,0 +1,230 @@
+:root {
+  color-scheme: dark;
+  --bg: #020617;
+  --sidebar: #0b1120;
+  --card: rgba(15, 23, 42, 0.85);
+  --border: rgba(148, 163, 184, 0.18);
+  --primary: #22d3ee;
+  --text: #f8fafc;
+  --muted: #cbd5f5;
+  font-family: 'Inter', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.98), rgba(15, 23, 42, 0.9));
+  padding: 2.4rem 1.4rem;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar h1 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 0.8rem;
+  margin: 2rem 0 2.4rem;
+}
+
+.sidebar button {
+  all: unset;
+  padding: 0.65rem 0.9rem;
+  border-radius: 14px;
+  cursor: pointer;
+  color: var(--muted);
+  transition: background 0.2s ease;
+}
+
+.sidebar button.active,
+.sidebar button:hover {
+  background: rgba(34, 211, 238, 0.16);
+  color: var(--text);
+}
+
+.session-info {
+  font-size: 0.8rem;
+  color: rgba(226, 232, 240, 0.55);
+  line-height: 1.6;
+}
+
+.panel {
+  padding: 3rem;
+  display: grid;
+  gap: 2rem;
+  align-content: start;
+}
+
+.panel.hidden {
+  display: none;
+}
+
+header p {
+  color: rgba(226, 232, 240, 0.65);
+  margin-top: 0.4rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  padding: 2rem;
+  display: grid;
+  gap: 1.2rem;
+  box-shadow: 0 20px 48px rgba(2, 6, 23, 0.45);
+}
+
+.card label {
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.card input,
+.card textarea {
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(2, 6, 23, 0.6);
+  padding: 0.8rem 1rem;
+}
+
+.card button,
+button {
+  padding: 0.75rem 1.4rem;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.85), rgba(14, 165, 233, 0.85));
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+button:hover,
+.card button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: rgba(226, 232, 240, 0.55);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem 1.5rem;
+}
+
+.grid .wide {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-actions button[type='reset'] {
+  background: rgba(2, 6, 23, 0.6);
+  color: var(--text);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.list li {
+  padding: 1.2rem;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(2, 6, 23, 0.45);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.list li header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list li footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(226, 232, 240, 0.55);
+  font-size: 0.85rem;
+}
+
+.list li .actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.list small {
+  color: rgba(226, 232, 240, 0.55);
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.4rem;
+  }
+
+  .sidebar nav {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .panel {
+    padding: 2rem 1.4rem 3.4rem;
+  }
+}

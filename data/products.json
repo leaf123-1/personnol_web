@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prod-elite-trainer",
+    "name": "Elite Trainer Pro",
+    "category": "力量训练",
+    "price": 3899,
+    "currency": "CNY",
+    "description": "旗舰级智能训练器，集成力量、心率和姿态监测模块，适配多种训练场景。",
+    "image": "/assets/elite-trainer.svg",
+    "features": [
+      "高强度碳纤维支撑结构",
+      "AI 姿态纠正与训练方案推送",
+      "支持远程教练实时指导"
+    ],
+    "inventory": 12,
+    "badge": "新品"
+  },
+  {
+    "id": "prod-kinetic-bike",
+    "name": "Kinetic Ride S7",
+    "category": "有氧运动",
+    "price": 6299,
+    "currency": "CNY",
+    "description": "商用级动感单车，配备 27 英寸互动屏与 6 轴动力反馈系统，营造沉浸式训练体验。",
+    "image": "/assets/kinetic-bike.svg",
+    "features": [
+      "沉浸式骑行课程库",
+      "多点调节骑乘系统",
+      "超静音磁控阻力"
+    ],
+    "inventory": 8,
+    "badge": "热销"
+  },
+  {
+    "id": "prod-flex-studio",
+    "name": "Flex Studio Rack",
+    "category": "综合训练",
+    "price": 8999,
+    "currency": "CNY",
+    "description": "模块化训练仓系统，支持力量、心肺与功能性训练模块任意组合，满足场馆多场景运营。",
+    "image": "/assets/flex-studio.svg",
+    "features": [
+      "模块化拓展配件",
+      "云端课程与会员管理",
+      "适配中大型运动空间"
+    ],
+    "inventory": 5,
+    "badge": "旗舰"
+  }
+]

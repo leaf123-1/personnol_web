@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <defs>
+    <linearGradient id="bikeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="28" fill="#020617" />
+  <path d="M160 360 L240 180 L360 180 L440 360" fill="none" stroke="#f8fafc" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="200" cy="360" r="72" fill="#0f172a" stroke="#14b8a6" stroke-width="14" />
+  <circle cx="400" cy="360" r="94" fill="#0f172a" stroke="#22d3ee" stroke-width="18" />
+  <rect x="240" y="120" width="160" height="24" rx="12" fill="#38bdf8" />
+  <rect x="272" y="144" width="96" height="16" rx="8" fill="#f8fafc" opacity="0.8" />
+</svg>

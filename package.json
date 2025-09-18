@@ -1,0 +1,19 @@
+{
+  "name": "apex-athletics",
+  "version": "1.0.0",
+  "description": "高端体育器材独立站及后台管理服务",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sports",
+    "ecommerce",
+    "independent-site",
+    "node"
+  ],
+  "author": "Apex Athletics",
+  "license": "MIT",
+  "type": "commonjs"
+}

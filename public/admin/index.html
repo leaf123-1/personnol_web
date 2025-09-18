@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Athletics 后台中心</title>
+    <link rel="stylesheet" href="/admin/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="sidebar">
+        <h1>Apex 控制台</h1>
+        <nav>
+          <button data-panel="login" class="active">登录</button>
+          <button data-panel="products">产品管理</button>
+          <button data-panel="site">站点配置</button>
+          <button data-panel="orders">订单记录</button>
+        </nav>
+        <div class="session-info" id="sessionInfo"></div>
+      </aside>
+      <section class="panel" id="login" aria-live="polite">
+        <header>
+          <h2>管理员登录</h2>
+          <p>使用环境变量中配置的管理员邮箱与密码登录。</p>
+        </header>
+        <form id="loginForm" class="card">
+          <label>
+            邮箱
+            <input type="email" name="email" placeholder="admin@example.com" required />
+          </label>
+          <label>
+            密码
+            <input type="password" name="password" placeholder="请输入密码" required />
+          </label>
+          <button type="submit">登录</button>
+          <p class="hint">默认账号：admin@apex-athletics.com / ChangeMe123!</p>
+        </form>
+      </section>
+
+      <section class="panel hidden" id="products">
+        <header>
+          <h2>产品管理</h2>
+          <p>新增或编辑前台展示的产品，图片链接与文案均可自定义。</p>
+        </header>
+        <div class="card">
+          <form id="productForm" class="grid">
+            <input type="hidden" name="id" />
+            <label>
+              产品名称
+              <input name="name" placeholder="例如 Elite Trainer Pro" required />
+            </label>
+            <label>
+              分类
+              <input name="category" placeholder="例如 力量训练" required />
+            </label>
+            <label>
+              价格 (数字)
+              <input name="price" type="number" min="0" step="0.01" required />
+            </label>
+            <label>
+              货币
+              <input name="currency" placeholder="CNY" />
+            </label>
+            <label class="wide">
+              产品描述
+              <textarea name="description" rows="3" placeholder="产品卖点介绍"></textarea>
+            </label>
+            <label class="wide">
+              特性（每行一条）
+              <textarea name="features" rows="3" placeholder="高强度材质\nAI 训练课程"></textarea>
+            </label>
+            <label>
+              库存数量
+              <input name="inventory" type="number" min="0" step="1" required />
+            </label>
+            <label>
+              标签
+              <input name="badge" placeholder="新品 / 热销" />
+            </label>
+            <label class="wide">
+              图片链接
+              <input name="image" placeholder="/assets/your-product.svg" />
+            </label>
+            <div class="form-actions wide">
+              <button type="submit">保存产品</button>
+              <button type="reset" id="resetProduct">清空</button>
+            </div>
+          </form>
+        </div>
+        <div class="card">
+          <h3>当前产品</h3>
+          <ul id="productList" class="list"></ul>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="site">
+        <header>
+          <h2>站点配置</h2>
+          <p>调整首页文案、背景图、亮点文案与底部联系方式。</p>
+        </header>
+        <form id="siteForm" class="card grid">
+          <label>
+            品牌名称
+            <input name="brand" placeholder="Apex Athletics" />
+          </label>
+          <label class="wide">
+            Hero 标题
+            <input name="heroTitle" placeholder="升级你的专业训练空间" />
+          </label>
+          <label class="wide">
+            Hero 副标题
+            <textarea name="heroSubtitle" rows="2" placeholder="高端体育器材解决方案"></textarea>
+          </label>
+          <label class="wide">
+            Hero 背景图地址
+            <input name="heroImage" placeholder="/assets/hero.svg" />
+          </label>
+          <label class="wide">
+            亮点（JSON 数组）
+            <textarea name="highlights" rows="4" placeholder='[{"title":"智能联动","description":"……"}]'></textarea>
+          </label>
+          <label class="wide">
+            顾问区描述
+            <textarea name="consult" rows="3" placeholder='{"title":"预约专属顾问","description":"……"}'></textarea>
+          </label>
+          <label class="wide">
+            底部联系方式
+            <textarea name="footer" rows="3" placeholder='{"email":"service@apex.com","phone":"+86 …","address":"…"}'></textarea>
+          </label>
+          <button type="submit">更新站点配置</button>
+        </form>
+      </section>
+
+      <section class="panel hidden" id="orders">
+        <header>
+          <h2>预订单列表</h2>
+          <p>展示访客提交的预订单，可导出后连接支付系统处理。</p>
+        </header>
+        <div class="card">
+          <button id="refreshOrders">刷新</button>
+          <ul id="orderList" class="list"></ul>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/admin/admin.js"></script>
+  </body>
+</html>
